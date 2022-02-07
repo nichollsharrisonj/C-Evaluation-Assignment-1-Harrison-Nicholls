@@ -1,61 +1,61 @@
 
 Running benchmark with: 28 objects and 1071428 iterations:
 
-Mean time per coordinate: 0.0109785392 us
+Mean time per coordinate: 0.0123656733 us
 
 Running benchmark with: 56 objects and 535714 iterations:
 
-Mean time per coordinate: 0.0068490703 us
+Mean time per coordinate: 0.0070687371 us
 
 Running benchmark with: 112 objects and 267857 iterations:
 
-Mean time per coordinate: 0.0049218693 us
+Mean time per coordinate: 0.0050455694 us
 
 Running benchmark with: 224 objects and 133928 iterations:
 
-Mean time per coordinate: 0.0040316839 us
+Mean time per coordinate: 0.0040901841 us
 
 Running benchmark with: 448 objects and 66964 iterations:
 
-Mean time per coordinate: 0.0034553147 us
+Mean time per coordinate: 0.0035501485 us
 
 Running benchmark with: 896 objects and 33482 iterations:
 
-Mean time per coordinate: 0.0032534472 us
+Mean time per coordinate: 0.0032483805 us
 
 Running benchmark with: 1792 objects and 16741 iterations:
 
-Mean time per coordinate: 0.0030958132 us
+Mean time per coordinate: 0.0031194133 us
 
 Running benchmark with: 3584 objects and 8370 iterations:
 
-Mean time per coordinate: 0.0030249269 us
+Mean time per coordinate: 0.0033643820 us
 
 Running benchmark with: 7168 objects and 4185 iterations:
 
-Mean time per coordinate: 0.0031524351 us
+Mean time per coordinate: 0.0033529146 us
 
 Running benchmark with: 14336 objects and 2092 iterations:
 
-Mean time per coordinate: 0.0031437857 us
+Mean time per coordinate: 0.0033437129 us
 
 Running benchmark with: 28672 objects and 1046 iterations:
 
-Mean time per coordinate: 0.0031598239 us
+Mean time per coordinate: 0.0033350770 us
 
 Running benchmark with: 57344 objects and 523 iterations:
 
-Mean time per coordinate: 0.0031416851 us
+Mean time per coordinate: 0.0033514486 us
 
 Running benchmark with: 114688 objects and 261 iterations:
 
-Mean time per coordinate: 0.0031541178 us
+Mean time per coordinate: 0.0033397956 us
 
 Running benchmark with: 229376 objects and 130 iterations:
 
-Mean time per coordinate: 0.0031470330 us
+Mean time per coordinate: 0.0034036490 us
 
 Running benchmark with: 458752 objects and 65 iterations:
 
-Mean time per coordinate: 0.0031707764 us
+Mean time per coordinate: 0.0036274334 us
 

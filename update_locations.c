@@ -1,9 +1,9 @@
 #include "update_locations.h"
 // Create a list of 'size' floating point numbers in the range [-bound, bound]
-vec_t* generate_random_list(int size, int bound) {
+def_type* generate_random_list(int size, int bound) {
         int seed = size;
         srand((unsigned) seed);
-        vec_t* list = (vec_t*)malloc(size * sizeof(vec_t));
+        def_type* list = (def_type*)malloc(size * sizeof(def_type));
         for(int  i = 0 ; i < size; i++) {
                 float zero_to_one = rand()/ (float)RAND_MAX;
                 float randresult = (zero_to_one * 2 * bound) - bound;      
@@ -14,7 +14,7 @@ vec_t* generate_random_list(int size, int bound) {
 
 
 //Update position by velocity, one time-step. Does not need to return 
-void update_coords(vec_t* xs, vec_t* ys, vec_t* zs, vec_t* vx, vec_t* vy, vec_t* vz, int size){
+void update_coords(def_type* xs, def_type* ys, def_type* zs, def_type* vx, def_type* vy, def_type* vz, int size){
         for (int i = 0; i < size; i++){
                 xs[i] = xs[i] + vx[i];
                 ys[i] = ys[i] + vy[i];
@@ -23,8 +23,8 @@ void update_coords(vec_t* xs, vec_t* ys, vec_t* zs, vec_t* vx, vec_t* vy, vec_t*
 }
 
 //Calculate sum of an arbitrary array, used for checksum
-vec_t sum(vec_t* arr, int size){
-        vec_t sum = 0;
+def_type sum(def_type* arr, int size){
+        def_type sum = 0;
         for (int i = 0; i < size; i++){
                 sum += (arr[i]);                
         }
@@ -32,7 +32,7 @@ vec_t sum(vec_t* arr, int size){
 }
 
 //Take time of execution
-double time_to_execute(vec_t* xs, vec_t* ys, vec_t* zs, vec_t* vx, vec_t* vy, vec_t* vz, int size){
+double time_to_execute(def_type* xs, def_type* ys, def_type* zs, def_type* vx, def_type* vy, def_type* vz, int size){
         double time;
 
         clock_t start = clock();
@@ -60,21 +60,21 @@ int main(int argc, char* argv[]) {
 
         double timetotal = 0;
         
-        vec_t* xs = generate_random_list(size, 1000.);
-        vec_t* ys = generate_random_list(size, 1000.);
-        vec_t* zs = generate_random_list(size, 1000.);
-        vec_t* vx = generate_random_list(size, 1.);
-        vec_t* vy = generate_random_list(size, 1.);
-        vec_t* vz = generate_random_list(size, 1.);
+        def_type* xs = generate_random_list(size, 1000.);
+        def_type* ys = generate_random_list(size, 1000.);
+        def_type* zs = generate_random_list(size, 1000.);
+        def_type* vx = generate_random_list(size, 1.);
+        def_type* vy = generate_random_list(size, 1.);
+        def_type* vz = generate_random_list(size, 1.);
 
 
         for (int i = 0; i < iterations; i++){
                 timetotal += time_to_execute(xs,ys,zs,vx,vy,vz,size);
                 // printf("%.100ld \n",timetotal);
         }
-        //vec_t chksum = sum(xs,size) + sum(ys,size) + sum(zs,size);
+        def_type chksum = sum(xs,size) + sum(ys,size) + sum(zs,size);
         printf("Mean time per coordinate: %.10f us\n",timetotal / (size * iterations));
-        // printf("Final checksum is: %f\n",chksum);
+        printf("Final checksum is: %f\n",chksum);
         return 0;
 }
 
